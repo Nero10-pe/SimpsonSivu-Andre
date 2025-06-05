@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tässä on minun sivu">
-    <meta name="keywords" content="koira, pöytä, kengät">
-    <meta name="author" content="Andre Cerdan Rios">
-    <link rel="stylesheet" href="styles.css">
-
-    <script src="keskustelupalsta.js" defer></script>
-
-    <title>Keskustelupalsta</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tässä on minun sivu" />
+  <meta name="keywords" content="koira, pöytä, kengät" />
+  <meta name="author" content="Andre Cerdan Rios" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="keskustelupalsta.js" defer></script>
+  <title>Keskustelupalsta</title>
 </head>
 
 <body>
-<div class="container">
+  <div class="container">
     <header>
-        <img src=".\IMG\banner.png" class="logo">
-        <h1 clas="titulo">The Simpsons Page</h1>
+      <img src="./IMG/banner.png" class="logo" />
+      <h1 class="titulo">The Simpsons Page</h1>
     </header>
     <nav>
-        <a href="etusivu.html">Etusivu</a>
-        <a href="springfieldsivu.html">Springfield</a>
-        <a href="hahmosivu.html">Characters</a>
-        <a href="keskustelupalsta.html">Forum</a>
+      <a href="etusivu.html">Etusivu</a>
+      <a href="springfieldsivu.html">Springfield</a>
+      <a href="hahmosivu.html">Characters</a>
+      <a href="keskustelupalsta.html">Forum</a>
     </nav>
     <div class="content-wrapper">
-        <main>
-           
-
-        </main>
+      <main>
+        <h2>Forum</h2>
+        <button id="newMessageBtn">New message</button>
+        <div id="messageList"></div>
+        <dialog id="messageDialog">
+          <form id="messageForm" method="dialog">
+            <label>
+              Name:
+              <input type="text" id="senderName" required />
+            </label>
+            <label>
+              Title:
+              <input type="text" id="messageTitle" required />
+            </label>
+            <label>
+              Message:
+              <textarea id="messageContent" rows="4" required></textarea>
+            </label>
+            <div style="margin-top: 10px;">
+              <button type="submit">Send</button>
+              <button type="button" id="cancelBtn">Cancel</button>
+            </div>
+          </form>
+        </dialog>
+      </main>
     </div>
     <footer>
-         <p>© 2025 Andre Cerdan Rios</p>
+      <p>© 2025 Andre Cerdan Rios</p>
     </footer>
-</div>
-    
+  </div>
 </body>
 </html>

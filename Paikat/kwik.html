@@ -7,11 +7,13 @@
     <meta name="keywords" content="koira, pöytä, kengät">
     <meta name="author" content="Andre Cerdan Rios">
     <link rel="stylesheet" href="..\styles.css">
-
     <title>Kwik'e'mart</title>
-
+    <script src="kwik.js" defer></script>
 </head>
-
+<div id="image-modal" class="modal">
+    <span class="close-btn" onclick="closeModal()">✖ Sulje</span>
+    <img class="modal-content" id="modal-img" alt="Imagen ampliada">
+</div>
 <body>
 <div class="container">
     <header>
@@ -25,13 +27,16 @@
     </nav>
     <div class="content-wrapper">
         <main>
-            <h2>Kwik'e'mart</h2>
-            <img src="..\IMG.\interiork.jpg" class="sivuk">
-            <img src="..\IMG.\kwik1.jpg" class="sivuk">
-            <img src="..\IMG.\kwik2.png" class="sivuk">
-            <img src="..\IMG.\kwik3.png" class="sivuk">
-            <img src="..\IMG.\kwik4.png" class="sivuk">
-            <img src="..\IMG.\kwik5.png" class="sivuk">
+            <h2>Kwik-E-Mart</h2>
+
+            <div class="location-grid">
+                <img src="../IMG/interiork.jpg" alt="Interior del Kwik-E-Mart" onclick="openModal(this.src)">
+                <img src="../IMG/kwik1.jpg" alt="Estante 1" onclick="openModal(this.src)">
+                <img src="../IMG/kwik2.png" alt="Caja registradora" onclick="openModal(this.src)">
+                <img src="../IMG/kwik3.png" alt="Pasillo" onclick="openModal(this.src)">
+                <img src="../IMG/kwik4.png" alt="Bebidas" onclick="openModal(this.src)">
+                <img src="../IMG/kwik5.png" alt="Entrada" onclick="openModal(this.src)">
+            </div>
         </main>
     </div>
     <footer>

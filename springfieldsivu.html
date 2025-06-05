@@ -12,18 +12,6 @@
 
     <title>Springfieldsivu</title>
 </head>
-<style>
-    h2 {
-        padding-left: 2em;
-    }
-    .casa, .moes, .kuik {
-        width: 440x;
-        height: 300px;
-        display: inline-block;
-        margin: 10px;
-    }
-</style>
-
 <body>
 <div class="container">
     <header>
@@ -37,21 +25,23 @@
         <a href="keskustelupalsta.html">Forum</a>
     </nav>
     <div class="content-wrapper">
+        
         <main>
-            <h2>Yleiskuva Springfieldin kaupunki</h2>
-           <img src=".\IMG\springfield.jpg"  class="springfield">
+            <div class="banner-container">
+                <img src="./IMG/springfield.jpg" class="springfield-banner" alt="Springfield Banner">
+            </div>
            <h2>Springfieldin paikat</h2>
-           <div>
-                <a href=".\Paikat\koti.html">
-                    <img src=".\IMG\casa.png" class="casa">
+            <div class="location-grid">
+                <a href="./Paikat/koti.html">
+                    <img src="./IMG/casa.png" alt="Simpsonien koti">
                 </a>
-                <a href=".\Paikat\moes.html">
-                    <img src=".\IMG\moes.png" class="moes">
+                <a href="./Paikat/moes.html">
+                    <img src="./IMG/moes.png" alt="Moe's">
                 </a>
-                <a href=".\Paikat\kwik.html">
-                    <img src=".\IMG\kuik.png" class="kuik">    
+                <a href="./Paikat/kwik.html">
+                    <img src="./IMG/kuik.png" alt="Kwik-e-Mart">
                 </a>
-           </div>
+            </div>
         </main>
     </div>
     <footer>

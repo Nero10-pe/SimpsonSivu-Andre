@@ -6,38 +6,44 @@
     <meta name="description" content="Tässä on minun sivu">
     <meta name="keywords" content="koira, pöytä, kengät">
     <meta name="author" content="Andre Cerdan Rios">
-    <link rel="stylesheet" href="..\styles.css">
-
+    <link rel="stylesheet" href="../styles.css">
     <title>Moe's</title>
-
+    <script src="moes.js" defer></script>
 </head>
-
+<div id="image-modal" class="modal">
+    <span class="close-btn" onclick="closeModal()">✖ Sulje</span>
+    <img class="modal-content" id="modal-img" alt="Imagen ampliada">
+</div>
 <body>
 <div class="container">
     <header>
-        <img src="..\IMG\banner.png" class="logo">
-        <h1 clas="titulo">The Simpsons Page</h2>
+        <img src="../IMG/banner.png" class="logo" alt="logo">
+        <h1 class="titulo">The Simpsons Page</h1>
     </header>
+
     <nav>
         <a href="../springfieldsivu.html">Springfield</a>
         <a href="../hahmosivu.html">Characters</a>
         <a href="../keskustelupalsta.html">Forum</a>
     </nav>
+
     <div class="content-wrapper">
         <main>
-            <h2>Moe's</h2>
-            <img src="..\IMG.\moes1.png" class="sivuk">
-            <img src="..\IMG.\moes2.jpg" class="sivuk">
-            <img src="..\IMG.\moes3.jpg" class="sivuk">
-            <img src="..\IMG.\moes4.jpg" class="sivuk">
-            <img src="..\IMG.\chela.png" class="sivuk">
-            <img src="..\IMG.\interior.png" class="sivuk">
+            <h2>Moe's Tavern</h2>
+            <div class="location-grid">
+                <img src="../IMG/moes1.png" alt="Entrada" onclick="openModal(this.src)">
+                <img src="../IMG/moes2.jpg" alt="Interior 1" onclick="openModal(this.src)">
+                <img src="../IMG/moes3.jpg" alt="Interior 2" onclick="openModal(this.src)">
+                <img src="../IMG/moes4.jpg" alt="Mesa del bar" onclick="openModal(this.src)">
+                <img src="../IMG/chela.png" alt="Cerveza Duff" onclick="openModal(this.src)">
+                <img src="../IMG/interior.png" alt="Ambiente Moe's" onclick="openModal(this.src)">
+            </div>
         </main>
     </div>
+
     <footer>
         <p>© 2025 Andre Cerdan Rios</p>
     </footer>
 </div>
-    
 </body>
 </html>

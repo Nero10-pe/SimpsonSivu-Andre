@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Homer Simpson</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="maggie.js"defer></script>
+    <style>
+        .tab-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .tab-buttons button {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+            background-color: #ddd;
+        }
+        .tab-buttons .active {
+            background-color: #333;
+            color: white;
+        }
+        .character-container {
+            display: flex;
+            gap: 30px;
+        }
+        .info-text {
+            max-width: 700px;
+        }
+        .memes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .memes-grid img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .actor-img {
+            width: 150px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../IMG/banner.png" class="logo" />
+            <h1 class="titulo">The Simpsons Page</h1>
+        </header>
+        <nav>
+            <a href="../etusivu.html">Etusivu</a>
+            <a href="../springfieldsivu.html">Springfield</a>
+            <a href="../hahmosivu.html">Characters</a>
+            <a href="../keskustelupalsta.html">Forum</a>
+        </nav>
+
+        <main>
+            <div class="character-tab-content"  style="min-height: 520px;">
+                <div class="tab-buttons">
+                    <button id="btn-info" class="active" onclick="showTab('info')">Info</button>
+                    <button id="btn-memes" onclick="showTab('memes')">Memes</button>
+                </div>
+                <div id="info">
+                    <div class="character-container">
+                        <img src="../IMG/MAGGIE.png" alt="maggie" width="200px" />
+                        <div class="info-text">
+                            <h2>Full Name: Margaret Lenny "Maggie" Simpson</h2>
+                            <p>Is the youngest child of Marge and Homer Simpson, the baby sister to Bart and Lisa Simpson and one of the five main characters of The Simpsons. She is often seen sucking on her pacifier, and when she walks, she usually trips over her clothing and falls on her face. Because she rarely ever talks, Maggie is the least seen and heard in the Simpson family. Maggie is very young, at the infant age of only one year old.</p>
+                            <p><strong>Voice Actor:</strong> has no voice </p>
+                            <div class="actor-audio">
+                                    <img src="../IMG/maggie3.jpg" alt="maggie" class="actor-img"/>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+                <div id="memes" style="display: none;">
+                    <div class="character-container">
+                        <img src="../IMG/MAGGIE.png" alt="Maggie" width="200px" />
+                        <div class="memes-grid">
+                            <img src="../IMG/maggie1.jpg" alt="Meme 1" onclick="openMemeModal(this.src)"/>
+                            <img src="../IMG/maggie2.jpg" alt="Meme 2" onclick="openMemeModal(this.src)"/>
+                            <img src="../IMG/maggie33.jpg" alt="Meme 3" onclick="openMemeModal(this.src)"/>
+                            <img src="../IMG/maggie4.jpg" alt="Meme 4" onclick="openMemeModal(this.src)"/>
+                            <img src="../IMG/maggie5.jpg" alt="Meme 5" onclick="openMemeModal(this.src)"/>
+                            <img src="../IMG/maggie6.jpg" alt="Meme 6" onclick="openMemeModal(this.src)"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 Andre Cerdan Rios</p>
+        </footer>
+    </div>
+    <div id="memeModal" class="modal">
+        <span class="close-btn" onclick="closeMemeModal()">✖ Sulje</span>
+        <img class="modal-content" id="memeZoom">
+    </div>
+</body>
+</html>
